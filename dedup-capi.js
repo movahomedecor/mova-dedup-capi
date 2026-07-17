@@ -38,7 +38,7 @@ function hashAddress(address) {
 async function sendToMetaCAPI(orderData, accessToken) {
   try {
     const pixelId = '1171432318200969';
-    const datasetId = '111432318200969';
+    const datasetId = '1171432318200969';
 
     // Extrair dados do pedido
     const orderId = orderData.id;
