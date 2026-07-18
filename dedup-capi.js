@@ -86,9 +86,9 @@ async function sendToMetaCAPI(orderData, accessToken) {
       key => userData[key] === undefined && delete userData[key]
     );
 
-    // Montar evento
+    // Montar evento — EVENT_ID SIMPLIFICADO
     const event = {
-      event_id: `shopify_purchase_${orderId}`, // ← CHAVE DE DEDUPLICAÇÃO
+      event_id: orderId.toString(), // ← SIMPLIFICADO: apenas o número do pedido
       event_name: 'Purchase',
       event_time: Math.floor(Date.now() / 1000),
       event_source_url: orderData.order_status_url || 'https://movadecor.com.br',
